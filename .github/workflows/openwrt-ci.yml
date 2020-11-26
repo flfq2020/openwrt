@@ -47,7 +47,8 @@ jobs:
           cd package
           mkdir openwrt-packages
           cd openwrt-packages
-          https://github.com/destan19/OpenAppFilter.git 
+          git clone https://github.com/destan19/OpenAppFilter.git
+          cd -
       - name: Update feeds
         run: |
           sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
